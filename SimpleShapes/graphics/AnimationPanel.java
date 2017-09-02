@@ -23,8 +23,8 @@ public class AnimationPanel extends JPanel implements ActionListener {
     public void paintComponent(Graphics g) {
         Graphics2D graphics2D = (Graphics2D)g.create();
         graphics2D.clearRect(0, 0, this.getWidth(), this.getHeight());
-        graphics2D.setBackground(Color.white);
-        //graphics2D.rotate(40);
+        graphics2D.setPaint(Color.WHITE);
+        graphics2D.fillRect(0,0,this.getWidth(),this.getHeight());
         graphics2D.scale(4d,4d);
         graphics2D.drawImage(new QuestionCube().asImage(),100,75,this);
 
