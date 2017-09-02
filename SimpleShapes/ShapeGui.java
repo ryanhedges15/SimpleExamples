@@ -25,7 +25,7 @@ public class ShapeGui extends JFrame {
         frame = new JFrame("Just A Plane GUI");
         panel = new AnimationPanel();
         frame.setContentPane(panel);
-        panel.setBackground(Color.decode("#1e6ded"));
+        panel.setBackground(Color.white);
         frame.setResizable(false);
         Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
         frame.setSize((int) screen.getWidth(), (int) screen.getHeight());
