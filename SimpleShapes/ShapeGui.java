@@ -1,9 +1,7 @@
 import graphics.CloudComponent;
-import jdk.nashorn.internal.ir.CatchNode;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.*;
 
 /**
  * Created by rmhedge on 9/1/17.
@@ -14,19 +12,20 @@ public class ShapeGui extends JFrame {
 
     public static void main(String[] args) {
          init();
-         CloudComponent component = new CloudComponent(0,0);
-         CloudComponent component2 = new CloudComponent(500,200);
-         CloudComponent component3 = new CloudComponent(300,100);
-
-
+         CloudComponent component = new CloudComponent(200,200);
+         CloudComponent component2 = new CloudComponent(500,500);
+         CloudComponent component3 = new CloudComponent(600,100);
 
          panel.add(component);
          panel.add(component2);
          panel.add(component3);
+         int i = 1;
          while (true) {
-             //panel.repaint();
+             panel.repaint();
+             i++;
              try {
-                 Thread.sleep(100);
+
+                 Thread.sleep(2000);
              }
              catch (InterruptedException e) {
 

@@ -9,6 +9,8 @@ import java.awt.geom.Ellipse2D;
 public class Cloud {
 
         private int x, y;
+        private int length=400;
+        private int width=400;
 
         /**
          * Constructs a cloud with a given top left corner
@@ -26,22 +28,31 @@ public class Cloud {
          */
         public void draw(Graphics2D g2) {
             Ellipse2D.Double cloud = new Ellipse2D.Double(x +100, y +100,
-                    100, 100);
+                    width/4, length/4);
             Ellipse2D.Double cloud2 = new Ellipse2D.Double(x +200, y +100,
-                    100, 100);
+                    width/4, length/4);
             Ellipse2D.Double cloud3 = new Ellipse2D.Double(x +145, y +110,
-                    100, 100);
+                    width/4, length/4);
             Ellipse2D.Double cloud4 = new Ellipse2D.Double(x +160, y +90,
-                    100, 100);
+                    width/4, length/4);
             g2.setPaint(Color.WHITE);
             g2.fill(cloud);
             g2.fill(cloud2);
             g2.fill(cloud3);
             g2.fill(cloud4);
 
+
             g2.draw(cloud);
             g2.draw(cloud2);
             g2.draw(cloud3);
             g2.draw(cloud4);
         }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
 }

@@ -8,19 +8,28 @@ import javax.swing.*;
  */
 public class CloudComponent extends JComponent {
 
-        private Cloud cloud;
+    private Cloud cloud;
 
-        public CloudComponent(int x, int y) {
-            super();
-            cloud = new Cloud(x,y);
-            this.setVisible(true);
-            this.setSize(this.getMaximumSize());
-        }
+    public CloudComponent(int x, int y) {
+        super();
+        cloud = new Cloud(x, y);
+        this.setVisible(true);
+        this.setSize(this.getMaximumSize());
+    }
 
-        @Override
-        public void paintComponent(Graphics g) {
-            Graphics2D g2 = (Graphics2D) g;
-            g2.setPaint(Color.white);
-            cloud.draw(g2);
-        }
+    @Override
+    public void paintComponent(Graphics g) {
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setPaint(Color.white);
+
+        cloud.draw(g2);
+    }
+
+    public void setLength(int length) {
+        cloud.setLength(length);
+    }
+
+    public void setWidth(int width) {
+        cloud.setWidth(width);
+    }
 }
