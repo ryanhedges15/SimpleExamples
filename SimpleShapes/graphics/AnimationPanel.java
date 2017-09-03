@@ -5,9 +5,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.AffineTransform;
-import java.sql.Time;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by rmhedge on 9/2/17.
@@ -40,33 +37,30 @@ public class AnimationPanel extends JPanel implements ActionListener {
 
         }
         if (currFrame >= 2) {
-            graphics2D.rotate(Math.toRadians(45));
+            graphics2D.rotate(Math.toRadians(45),25,25);
 
         }
         if (currFrame >= 3) {
-            graphics2D.rotate(Math.toRadians(-90));
+            graphics2D.rotate(Math.toRadians(-90),25,25);
         }
         if (currFrame >= 4) {
             graphics2D.scale(2, .5);
         }
 
-        //graphics2D.translate(25,-25);
-        graphics2D.drawImage(new Coin().asImage(),0,0,this);
+        graphics2D.drawImage(new Coin().asImage(),30,30,this);
 
-        graphics2D.translate(-30,-30);
-        graphics2D.drawImage(new Coin().asImage(),0,0,this);
-
+        graphics2D.drawImage(new QuestionCube().asImage(),0,0,this);
+        graphics2D.drawImage(new Mug().asImage(),60,0,this);
         graphics2D.setTransform(old);
 
     }
 
     public void actionPerformed(ActionEvent event) {
-        System.out.println("Repainting");
         this.frameNumber++;
         this.repaint();
     }
 
-    private void applyWindowToViewportTranformation(Graphics2D graphics2D,double left, double right,double bottom,double top,boolean retainAspect){
+    private void applyWindowToViewportTranformation(Graphics2D graphics2D,double left, double right,double top,double bottom,boolean retainAspect){
         int width = super.getWidth();
         int height = super.getHeight();
         if(retainAspect) {
