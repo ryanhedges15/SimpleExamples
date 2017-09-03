@@ -1,10 +1,7 @@
-package graphics;
+package graphics.shedges;
 
 import java.awt.*;
 
-/**
- * Created by rmhedge on 9/2/17.
- */
 public class QuestionCube extends PixelMap {
     Color[] colors =  {Color.RED,Color.WHITE,Color.BLACK,Color.ORANGE};
     

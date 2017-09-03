@@ -1,14 +1,8 @@
-import graphics.AnimationPanel;
-import graphics.PixelMap;
-import graphics.QuestionCube;
+package graphics.shedges;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
-/**
- * Created by rmhedge on 9/1/17.
- */
 public class ShapeGui extends JFrame {
 
     private static JPanel panel;
@@ -22,7 +16,7 @@ public class ShapeGui extends JFrame {
 
 
     private static void init() {
-        frame = new JFrame("Just A Plane GUI");
+        frame = new JFrame("Graphics");
         panel = new AnimationPanel();
         frame.setContentPane(panel);
         panel.setBackground(Color.white);

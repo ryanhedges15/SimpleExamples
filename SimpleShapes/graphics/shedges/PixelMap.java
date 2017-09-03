@@ -1,11 +1,9 @@
-package graphics;
+package graphics.shedges;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-/**
- * Created by rmhedge on 9/2/17.
- */
+
 public abstract class PixelMap {
 
     private int width = 25;

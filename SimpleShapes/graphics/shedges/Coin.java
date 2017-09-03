@@ -1,11 +1,9 @@
-package graphics;
+package graphics.shedges;
 
 
 import java.awt.*;
 
-/**
- * Created by rmhedge on 9/2/17.
- */
+
 public class Coin extends PixelMap {
     Color[] colors =  {Color.white, Color.decode("#967c48"),Color.decode("#583B18"),Color.decode("#968748")};
     

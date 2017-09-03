@@ -1,4 +1,4 @@
-package graphics;
+package graphics.shedges;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,9 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.AffineTransform;
 
-/**
- * Created by rmhedge on 9/2/17.
- */
+
 public class AnimationPanel extends JPanel implements ActionListener {
 
     private int frameNumber = 0;
