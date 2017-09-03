@@ -26,14 +26,15 @@ public class ShapeGui extends JFrame {
         panel = new AnimationPanel();
         frame.setContentPane(panel);
         panel.setBackground(Color.white);
+        frame.pack();
         frame.setResizable(false);
         Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
         frame.setSize((int) screen.getWidth(), (int) screen.getHeight());
         frame.setLocation((screen.width - frame.getWidth()) / 2, (screen.height - frame.getHeight()) / 2);
         frame.setVisible(true);
-
-        //frame.pack();
     }
+
+
 
 
 }
