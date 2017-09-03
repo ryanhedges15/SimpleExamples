@@ -35,11 +35,11 @@ public class AnimationPanel extends JPanel implements ActionListener {
 
         }
         if (currFrame >= 2) {
-            graphics2D.rotate(Math.toRadians(45),25,25);
+            graphics2D.rotate(Math.toRadians(-45),25,25);
 
         }
         if (currFrame >= 3) {
-            graphics2D.rotate(Math.toRadians(-90),25,25);
+            graphics2D.rotate(Math.toRadians(90),25,25);
         }
         if (currFrame >= 4) {
             graphics2D.scale(2, .5);
